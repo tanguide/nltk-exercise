@@ -12,3 +12,10 @@ raw = bsObj.find("article", {"id": "node-374266"}).get_text()
 # raw = bsObj.body.h1.get_text()
 tokens = word_tokenize(raw)
 print("Tokens: " + str(tokens))
+print("------------------------")
+
+# change to NLTK Text object
+print()
+text = nltk.Text(tokens)
+print("Text object: "+ str(type(text)))
+text.concordance("Najib")
